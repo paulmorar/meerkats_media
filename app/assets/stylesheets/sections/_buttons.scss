@@ -1,0 +1,143 @@
+/*-----------------*/
+/* Global Styles   */
+/*-----------------*/
+
+.btn {
+    border-radius: 4px;
+    font-size: 12px;
+    padding: 15px 35px;
+    letter-spacing: 2px;
+    line-height: 6px;
+    text-transform: uppercase;
+    vertical-align: middle;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-property: background-color;
+    transition-property: background-color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+.btn:hover, .btn:focus, .btn:active {
+  color: white;
+  outline: none;
+}
+
+
+
+
+
+
+/*-----------------*/
+/* Solid Buttons   */
+/*-----------------*/
+
+
+.btn-default {
+    background-color: #ea8400;
+    border: 1px solid #e07e00;
+    color: #fff;
+
+  &:hover, &:active, &:focus {
+      background-color: #da7b00;
+      border: 1px solid #e07e00;
+      color: #fff;
+    }
+
+}
+
+.btn-mild{
+  &:hover, &:active, &:focus {
+    background-color: #000000;
+    color: #fff;
+  }
+}
+
+
+.btn-dark {
+  background-color: #000;
+  color: #fdfdfd;
+  &:hover, &:active, &:focus {
+    background-color: #fdfdfd;
+    color: #000000;
+  }
+}
+
+
+
+
+
+/*-----------------*/
+/* Outline Buttons */
+/*-----------------*/
+
+
+.btn-default-o {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.btn-default-o:hover, .btn-default-o:focus{
+  background-color: #fff;
+  color: #000000;
+}
+
+
+.btn-list {
+  margin-bottom: 0;
+  button{
+    margin-right: 15px;
+    margin-bottom: 15px;
+  }
+}
+
+.btn.btn-round {
+  border-radius: 14px;
+}
+
+/*bootstrap buttons*/
+.btn-lg {
+  padding: 15px 60px;
+}
+
+.btn-sm {
+  padding: 8px 20px;
+}
+
+.btn-xs {
+  padding: 6px 10px;
+}
+
+.btn-primary{
+  &:active, &:hover, &:focus{
+    color: #337ab7;
+  }
+}
+
+.btn-success{
+  &:active, &:hover, &:focus{
+    color: #5cb85c;
+  }
+}
+
+.btn-info{
+  &:active, &:hover, &:focus{
+    color: #46b8da;
+  }
+}
+
+.btn-warning{
+  &:active, &:hover, &:focus{
+    color: #eea236;
+  }
+}
+
+.btn-danger{
+  &:active, &:hover, &:focus{
+    color: #d43f3a;
+  }
+}

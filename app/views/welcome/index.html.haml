@@ -1,0 +1,663 @@
+%body{"data-offset" => "100", "data-target" => "#main-nav-collapse"}
+  -# .page-loader
+  -#   .loader Loading...
+  / Fixed Top Navigation
+  %nav#fixedTopNav.navbar.navbar-fixed-top.main-navigation{:itemscope => "", :itemtype => "https://schema.org/SiteNavigationElement", :role => "navigation"}
+    .container
+      .navbar-header
+        %button.navbar-toggle.collapsed{"data-target": "#main-nav-collapse", "data-toggle": "collapse", type: "button"}
+          %span.sr-only Toggle navigation
+          %span.ion-drag
+        / Logo
+        .navbar-brand{itemscope: "", itemtype: "https://schema.org/Organization"}
+          %span.sr-only{itemprop: "name"} Carswip
+          %a{href: root_path, itemprop: "url"}
+            Carswip
+        / /Logo
+      / /.navbar-header
+      / Navigation Links
+      #main-nav-collapse.collapse.navbar-collapse
+        %ul.nav.navbar-nav.navbar-right
+          %li
+            %a.page-scroll{href: "#about-us", itemprop: "url"}
+              %span{itemprop: "name"} About
+          %li
+            %a.page-scroll{href: "#services", itemprop: "url"}
+              %span{itemprop: "name"} Services
+          %li
+            %a.page-scroll{href: "#team", itemprop: "url"}
+              %span{itemprop: "name"} Team
+          %li
+            %a.page-scroll{href: "#pricing", itemprop: "url"}
+              %span{:itemprop => "name"} Pricing
+          %li
+            %a.page-scroll{href: "#contact", itemprop: "url"}
+              %span{itemprop: "name"} Contact
+      / /Navigation Links
+    / /.container
+  / /Fixed Top Navigation
+  / Header
+  %header#header.header-wrapper.home-parallax.home-fade.dark-bg.bg-10{style: 'background-image: url(https://www.lamborghini.com/en-en/sites/en-en/files/DAM/lamborghini/share%20img/huracan-coupe-facebook-og.jpg); background-size: cover;'}
+    / Background Youtube player start
+    #videoBackground.overlay{"data-property" => "{\n                        videoURL:'https://www.youtube.com/watch?v=1ufqweCJm2k',\n                        containment:'.header-wrapper',\n                        startAt:22,\n                        stopAt:290,\n                        mute:false,\n                        autoPlay:true,\n                        loop:true,\n                        opacity:1,\n                        showControls:false,\n                        showYTLogo:false,\n                        vol:25}"}
+    / Background Youtube player end
+    / Youtube controls start
+    -# .video-controls-box
+    -#   .container
+    -#     .video-controls
+    -#       %a#video-volume.fa.fa-volume-up{:href => "#"}  
+    -#       %a#video-play.fa.fa-pause{:href => "#"}  
+    / Youtube controls end
+    .color-overlay
+    .header-wrapper-inner
+      .container
+        .intro
+          %h1 To Begin, Begin
+          %p Thats How My Life Rolls
+          %a.btn.btn-default-o.onPageNav{:href => "#services"} Our Services
+        / /.intro
+      / /.container
+      .arrow-down
+        %a.onPageNav{:href => "#about-us"}
+          %i.ion-ios-arrow-down
+      / /.arrow-down
+    / /.header-wrapper-inner
+  / /Header
+  / About Us
+  %section#about-us.section.about-us
+    .container
+      /
+      %header.section-heading
+        %h2 About Us
+        %span Everything you need to know about our Company
+      / section-heading
+      /
+      .section-content
+        .row
+          .col-sm-4
+            / about-left
+            .about-content.left
+              %h4 We're Creative
+              %p Lorem adipipsum idolor sit iamet, iconsectetur aisicing elit. Necessitatibus illo vel dolorum soluta consectetur doloribus sit. Delectus non tenetur odit dicta vitae debitis suscipitaut voluptas quaerat consectetur.
+          / col-sm-4
+          .col-sm-4
+            / about-center
+            %figure.about-content.center
+              %img.img-responsive.center-block{:alt => "", :src => "http://www.medicalnewstoday.com/content/images/articles/297/297449/a-cup-of-coffee.jpg"}/
+          / col-sm-4
+          .col-sm-4
+            / about-right
+            .about-content.right
+              %h4 We're Friendly
+              %p Lorem adipipsum dolor sit amet, consecteturno aisicing elit. Necessitatibus illo vel dolorumsa soluta consectetur doloribus sit. Delectus tenetur odit dicta vitae debitis  susc ipitaut voluptas quaerat dolorum.
+          / col-sm-4
+        / row
+      / section-content
+    / container
+  / /About Us
+  / Video
+  %section#video.section.video-player.dark-bg{style: 'background-image: url(http://st.motortrend.com/uploads/sites/10/2016/03/2017-Audi-A4-20T-quattro-front-view-in-motion-03.jpg); background-size: cover;'}
+    .color-overlay
+    #video-info.container
+      .row
+        .col-sm-5
+          / video-left
+          .video-left
+            Watch Our
+            %br>/
+            Video
+        / col-sm-4
+        .col-sm-2
+          / Play Button
+          %a#playVideo.btn.video-icon{:href => "#"}
+            %i.ion-ios-play-outline
+        / col-sm-4
+        .col-sm-5
+          / video-right
+          .video-right
+            Create Your Own Slogan
+            = succeed "Golden" do
+              %br/
+            = succeed "Here" do
+              %br/
+        / col-sm-4
+      / row
+    / container
+  #video-container.container
+    .row
+      .col-md-8.col-md-offset-2
+        #ytPlayer.embed-responsive.embed-responsive-16by9
+          %iframe.embed-responsive-item{:frameborder => "0", :src => "http://www.youtube.com/embed/w9j3-ghRjBs?enablejsapi=1", :title => "YouTube video player", :type => "text/html"}
+        / ytPlayer
+  / /Video
+  / Why-choose-us
+  %section#why-choose-us.section.why-choose-us
+    .container
+      %header.section-heading
+        %h2 Why Choose Us
+        %span Choosing an agency tough. Let us convince you
+      .section-content
+        .row
+          .col-sm-4.why-explain-wrap
+            / why-choose-us-text
+            %h4 Creative
+            .why-explain.top.top-1
+              %p Sollicitudin velit malesuada Aliqua andit diam feugiat ex.For those who
+          / col-md-4 col-sm-6
+          .col-sm-4.why-explain-wrap
+            / why-choose-us-text
+            %h4 Professional
+            .why-explain.top.top-2
+              %p Velit sollicitudin malesuada Aliqua andit diam feugiat ex.For those who
+          / col-md-4 col-sm-6
+          .col-sm-4.why-explain-wrap
+            / why-choose-us-text
+            %h4 Experienced
+            .why-explain.top.top-3
+              %p Sollicitudin velit malesuada Aliqua andit diam feugiat ex.For those who
+          / col-md-4 col-sm-6
+        / row
+        / why-choose-us-image
+        %figure.why-us-image
+          %img.img-responsive.center-block.hidden-xs{:alt => "", :src => "https://d13yacurqjgara.cloudfront.net/users/313635/screenshots/2623290/hotel.png"}/
+        .row
+          .col-sm-4.why-explain-wrap
+            / why-choose-us-text
+            .why-explain.bottom.bottom-1
+              %h4 Dedicated
+            %p
+              Sollicitudin velit malesuada Aliqua andit diam feugiat ex.For those who
+          / col-md-4 col-sm-6
+          .col-sm-4.why-explain-wrap
+            / why-choose-us-text
+            .why-explain.bottom.bottom-2
+              %h4 24/7 Support
+            %p
+              Sollicitudin velit malesuada Aliqua andit diam feugiat ex.For those who
+          / col-md-4 col-sm-6
+          .col-sm-4.why-explain-wrap.last
+            / why-choose-us-text
+            .why-explain.bottom.bottom-3
+              %h4 Enthusiastic
+            %p.last
+              Sollicitudin velit malesuada Aliqua andit diam feugiat ex.For those who
+          / col-md-4 col-sm-6
+        / row
+      / section-content
+    / container
+  / /Why-choose-us
+  / Call To Action
+  #cta-1.cta-1
+    .container
+      .call-to-action
+        .cta-text Are you excited to start your project?
+        %a.btn.btn-default-o{:href => "#"} Get Started
+    / container
+  / /Call To Action
+  / Fun Facts
+  -# %section#funfacts.section.dark-bg.funfacts
+  -#   .color-overlay
+  -#   .container
+  -#     %header.section-heading
+  -#       %h2 Do You Know
+  -#       %span Some cool facts about our company
+  -#     .section-content
+  -#       .row
+  -#         .col-sm-4
+  -#           .counter-box
+  -#             .counter-icon
+  -#               %span.ion-ios-partlysunny-outline
+  -#             .count.number 7781914
+  -#             .count-description Total Downloads
+  -#         .col-sm-4
+  -#           .counter-box
+  -#             .counter-icon
+  -#               %span.ion-ios-clock-outline
+  -#             .count.number 370704
+  -#             .count-description Minutes Well Spent
+  -#         .col-sm-4
+  -#           .counter-box.last
+  -#             .counter-icon
+  -#               %span.ion-ios-infinite-outline
+  -#             .count Infinite
+  -#             .count-description Coffees Were Consumed
+        / row
+      / section-content
+    / container
+  / /Fun Facts
+  / Service
+  %section#services.section.services
+    .container
+      /
+      %header.section-heading
+        %h2 Our Services
+        %span We plan, design, build and market high quality websites
+      /
+      .section-content
+        .row
+          .col-sm-4
+            / service
+            .service
+              .service-icon.text-center
+                %span.ion-ios-albums-outline
+              .about-service
+                %h4.text-center Responsive Design
+                %p.text-center Praesent dapibus eleifend aug eget sollicitudin velit malesuada Aliquam blandit diam feugiat ex eget sollicitudin eget.
+          / col-sm-4
+          .col-sm-4
+            / service
+            .service
+              .service-icon.text-center
+                %span.ion-ios-americanfootball-outline
+              .about-service
+                %h4.text-center Brand Identity
+                %p.text-center
+                  Praesent dapibus eleifend aug eget sollicitudin velit malesuada Aliquam blandit diam feugiat ex eget sollicitudin eget.
+          / col-sm-4
+          .col-sm-4
+            / service
+            .service
+              .service-icon.text-center
+                %span.ion-ios-game-controller-b-outline
+              .about-service
+                %h4.text-center Game Development
+                %p.text-center
+                  Praesent dapibus eleifend aug eget sollicitudin velit malesuada Aliquam blandit diam feugiat ex eget sollicitudin eget.
+          / col-sm-4
+        / row
+        .row.secondrow
+          .col-sm-4
+            / service
+            .service
+              .service-icon.text-center
+                %span.ion-ios-lightbulb-outline
+              .about-service
+                %h4.text-center Creative Theme
+                %p.text-center Praesent dapibus eleifend aug eget sollicitudin velit malesuada Aliquam blandit diam feugiat ex eget sollicitudin eget.
+          / col-sm-4
+          .col-sm-4
+            / service
+            .service
+              .service-icon.text-center
+                %span.ion-ios-pie-outline
+              .about-service
+                %h4.text-center Making Stretagy
+                %p.text-center
+                  Praesent dapibus eleifend aug eget sollicitudin velit malesuada Aliquam blandit diam feugiat ex eget sollicitudin eget.
+          / col-sm-4
+          .col-sm-4
+            / service
+            .service.last
+              .service-icon.text-center
+                %span.ion-ios-cart-outline
+              .about-service
+                %h4.text-center Business Solution
+                %p.text-center
+                  Praesent dapibus eleifend aug eget sollicitudin velit malesuada Aliquam blandit diam feugiat ex eget sollicitudin eget.
+          / col-sm-4
+        / row
+      / section-content
+    / container
+  / Service
+  / Clients
+  #clients.section.clients.overlay-1
+    .container
+      .section-content
+        #client-carousel.owl-carousel
+          .client-image.item
+            %img.img-responsive.center-block{alt: "", src: image_path("clients/c_logo01.png")}/
+          .client-image.item
+            %img.img-responsive.center-block{alt: "", src: image_path("clients/c_logo01.png")}/
+          .client-image.item
+            %img.img-responsive.center-block{alt: "", src: image_path("clients/c_logo01.png")}/
+          .client-image.item
+            %img.img-responsive.center-block{alt: "", src: image_path("clients/c_logo01.png")}/
+          .client-image.item
+            %img.img-responsive.center-block{alt: "", src: image_path("clients/c_logo01.png")}/
+          .client-image.item
+            %img.img-responsive.center-block{alt: "", src: image_path("clients/c_logo01.png")}/
+          .client-image.item
+            %img.img-responsive.center-block{alt: "", src: image_path("clients/c_logo01.png")}/
+          .client-image.item
+            %img.img-responsive.center-block{:alt => "", src: image_path("clients/c_logo01.png")}/
+          .client-image.item
+            %img.img-responsive.center-block{alt: "", src: image_path("clients/c_logo01.png")}/
+  / Clients
+  / Our Process
+  %section#our-process.section.our-process
+    .container
+      %header.section-heading
+        %h2 How We Did It
+        %span Working together to achieve great results
+      .section-content
+        .process
+          / our-process-image
+          .our-process-image
+            %span.ion-ios-flask-outline
+          .our-process-text
+            / our-process-text
+            %h4 Analysis &amp; Planing
+            %p For those who have seen the Earth from space, and for the hundreds and perhaps thousands more who will, the experience most certainly changes your perspective. The things that we share in our world are far more valuable than those which divide us.
+        / process
+        / divider
+        .divider.divider-right.hidden-xs
+        .process
+          / our-process-image
+          .our-process-image.left
+            %span.ion-ios-lightbulb-outline
+          .our-process-text.right
+            / our-process-text
+            %h4 Design &amp; Development
+            %p For those who have seen the Earth from space, and for the hundreds and perhaps thousands more who will, the experience most certainly changes your perspective. The things that we share in our world are far more valuable than those which divide us.
+        / process
+        / divider
+        .divider.divider-left.hidden-xs
+        .process
+          / our-process-image
+          .our-process-image
+            %span.ion-ios-speedometer-outline
+          .our-process-text
+            / our-process-text
+            %h4 Launch &amp; Grow
+            %p For those who have seen the Earth from space, and for the hundreds and perhaps thousands more who will, the experience most certainly changes your perspective. The things that we share in our world are far more valuable than those which divide us.
+        / process
+      / section-content
+    / container
+  / /Our Process
+  / Call To Action
+  #cta-2.cta-2.text-center
+    .container
+      %span.cta-text Want to see more from our works lorem ipsum dolor sit amet?
+      %a.btn.btn-default-o{:href => "portfolio__boxed__3_columns.html"} View all
+  / Call To Action
+  / Team
+  %section#team.section.team
+    .container
+      %header.section-heading
+        %h2 Meet the Team
+        %span Meet the Carswip team
+      .section-content
+        .row
+          .col-sm-4.col-sm-offset-2
+            / team-member's-bio
+            .team-bio
+              %figure
+                %img.img-responsive.center-block{alt: "", src: image_path('team/kim_jeppesen.png')}/
+              .team-description
+                .member-name Kim Jeppesen
+                .designation CEO &amp; CoFounder
+              / team-member's-social
+              .team-social
+                %ul.social-block
+                  %li
+                    %a{:href => "#"}
+                      %i.fa.fa-facebook
+                  %li
+                    %a{:href => "#"}
+                      %i.fa.fa-twitter
+                  %li
+                    %a{:href => "#"}
+                      %i.fa.fa-linkedin
+                  %li
+                    %a{:href => "#"}
+                      %i.fa.fa-google-plus
+            / /team bio
+          .col-sm-4.lborder
+            / team-member's-bio
+            .team-bio
+              %figure
+                %img.img-responsive.center-block{alt: "", src: image_path('team/christian_schmidt.png')}/
+              .team-description
+                .member-name Christian Schmidt
+                .designation CPO &amp; CoFounder
+              / team-member's-social
+              .team-social
+                %ul.social-block
+                  %li
+                    %a{:href => "#"}
+                      %i.fa.fa-facebook
+                  %li
+                    %a{:href => "#"}
+                      %i.fa.fa-twitter
+                  %li
+                    %a{:href => "#"}
+                      %i.fa.fa-linkedin
+                  %li
+                    %a{:href => "#"}
+                      %i.fa.fa-google-plus
+            / /team bio
+        / row
+      / section-content
+    / container
+  / Team
+  / Testimonial
+  %section#testimonial.section.overlay-1.testimonial.bg-image.dark-bg{style: 'background-image:url(https://techinfographics.com/wp-content/uploads/2016/06/shutterstock_229841482.jpg); background-size:cover; background-position: center bottom;'}
+    .color-overlay
+    .container
+      %header.section-heading
+        %h2 Client Testimonials
+        %span See what our customers have to say about us
+      .section-content
+        .row
+          .col-md-8.col-md-offset-2
+            / Wrapper for slides
+            .carosel-wrapper
+              .client-face-holder
+                #clientFace
+              .quote.left “
+              .quote.right ”
+              #testimonials-carousel.owl-carousel
+                .item
+                  .review{"data-client-image" => "assets/images/team/team-1.jpg"}
+                    %blockquote
+                      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                    %h4.reviewer Jimmy Doe
+                    %p.designation Car dealer
+                .item
+                  .review{"data-client-image" => "assets/images/team/team-2.jpg"}
+                    %blockquote
+                      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                    %h4.reviewer Elmo the great
+                    %p.designation Someone important
+                .item
+                  .review{"data-client-image" => "assets/images/team/team-3.jpg"}
+                    %blockquote
+                      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                    %h4.reviewer George Bush
+                    %p.designation The bush
+              / Controls
+              .owl-controls
+                %a.prev{href: "", role: "button"}
+                  %i.ion-ios-arrow-left
+                  %span.sr-only Previous
+                %a.next{"data-slide": "next", href: "", role: "button"}
+                  %i.ion-ios-arrow-right
+                  %span.sr-only Next
+              / /owl-controls
+            / carosel-wrapper
+          / /col
+        / row
+      / section-content
+    / container
+  / Testimonial
+  / Pricing
+  %section#pricing.section.pricing
+    .container
+      /
+      %header.section-heading
+        %h2 Our Pricing
+        %span Amazing services at affordable price
+      /
+      .section-content
+        .row
+          .col-md-4
+            .price-box
+              %h3 Standard
+              .price-info
+                .price
+                  %sup> $
+                  499
+                %ul
+                  %li Up to 5 pages
+                  %li 1 year hosting
+                  %li 3 months support
+                  %li SEO
+                  %li.disabled Secrity &amp; Backup
+                  %li.disabled 24/7 Support
+              %a.btn.btn-default{:href => "#"} Get Started
+          .col-md-4
+            .price-box.featured
+              %h3 Premium
+              .price-info
+                .price
+                  %sup> $
+                  799
+                %ul
+                  %li Up to 5 pages
+                  %li 1 year hosting
+                  %li 3 months support
+                  %li SEO
+                  %li Secrity &amp; Backup
+                  %li.disabled 24/7 Support
+              %a.btn.btn-default{:href => "#"} Get Started
+          .col-md-4
+            .price-box.last
+              %h3 Ultimate
+              .price-info
+                .price
+                  %sup> $
+                  999
+                %ul
+                  %li Up to 5 pages
+                  %li 1 year hosting
+                  %li 3 months support
+                  %li SEO
+                  %li Secrity &amp; Backup
+                  %li 24/7 Support
+              %a.btn.btn-default{:href => "#"} Get Started
+  / Pricing
+
+  / Contact-us
+  %section#contact.section.contact
+    .container
+      /
+      %header.section-heading
+        %h2 Feel free to drop us a line
+        %span We are happy to listen
+      /
+      .section-content
+        .row
+          .col-md-6.col-sm-5
+            %h5 Feel free to drop us a line!
+            %form#contactForm.contact-form{:action => "php/contact-form.php", :method => "post", :name => "contactform", :role => "form"}
+              .form-group
+                %input#name.form-control{:name => "name", :placeholder => "Your Name", :required => "", :type => "text"}/
+              .form-group
+                %input#email.form-control{:name => "email", :placeholder => "Email Address", :required => "", :type => "email"}/
+              .form-group
+                %textarea#message.form-control{:name => "massage", :placeholder => "Type your message here", :required => "", :rows => "5"}
+              #contactFormResponse
+              %button#cfsubmit.btn.btn-dark.btn-block.contact-submit{:type => "submit"} Give us a shout
+          .col-md-6.col-sm-7
+            %h5 Find us on Google map
+            .google-map
+              #map
+            .row.contact-info-wrap
+              .col-sm-6
+                %div
+                  %h5 Office Address
+                  %address.contact-info
+                    %span In space
+                    %br/
+                    = succeed "," do
+                      %span AArhus
+                    %span Midtjylland
+                    \-
+                    %span 8000
+                    %br/
+                    %span Denmark
+              .col-sm-6
+                %div
+                  %h5 Contact Information
+                  .contact-info
+                    00 00 00 00
+                    %br/
+                    00 00 00 00
+                    %br/
+                    info@carswip.com
+  / Contact-us
+  / Footer widgets
+  %section#footer-widgets.section.footer-widgets.dark-bg
+    .container
+      .row
+        .col-md-6.col-sm-6
+          .content-wrap.widget-text
+            %h4 About Carswip
+            %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores dolorum eius libero nihil. Fugiat ipsum officia reprehenderit rerum saepe. Assumenda distinctio, voluptatibus. At consectetur cumque enim error laudantium mollitia obcaecati!
+        .col-md-3.col-sm-6
+          .content-wrap.widget-contact
+            %h4 Contact info
+            %ul
+              %li
+                %i.ion-home
+                Aarhus
+              %li
+                %i.ion-android-call
+                some phone
+              %li
+                %i.ion-email
+                info@carswip.dk
+              %li
+                %i.ion-ios-location
+                Map and Direction
+        .col-md-3.col-sm-6
+          .content-wrap.widget-recent-posts
+            %h4 Recent Posts
+            %ul
+              %li
+                %a.post-title{:href => "#"} Lorem ipsum dolor sit amet
+                by
+                %a.author{:href => "#"} Jhon Smith
+              %li
+                %a.post-title{:href => "#"} Lorem ipsum dolor sit amet
+                by
+                %a.author{:href => "#"} Jhon Smith
+              %li
+                %a.post-title{:href => "#"} Lorem ipsum dolor sit amet
+                by
+                %a.author{:href => "#"} Jhon Smith
+  / Footer widgets
+  / footer
+  %footer#footer.footer
+    .container
+      .row
+        .col-md-3.col-sm-4
+          %p.copyright.text-xs-center © 2015 Your company name
+        .col-md-5.col-sm-4
+          %ul.footer-social-block
+            %li
+              %a{:href => "#"}
+                %i.fa.fa-facebook
+            %li
+              %a{:href => "#"}
+                %i.fa.fa-twitter
+            %li
+              %a{:href => "#"}
+                %i.fa.fa-pinterest-p
+            %li
+              %a{:href => "#"}
+                %i.fa.fa-behance
+            %li
+              %a{:href => "#"}
+                %i.fa.fa-google-plus
+            %li
+              %a{:href => "#"}
+                %i.fa.fa-linkedin
+        .col-md-4.col-sm-4
+          .footer-menu.text-xs-center
+            %a{:href => "#"} Privacy Policy
+            |
+            %a{:href => ""} Terms &amp; Conditions
+  / #footer
+  %a#totop{:href => "#totop"}
+    %i.fa.fa-angle-double-up
