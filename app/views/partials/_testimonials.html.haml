@@ -1,0 +1,40 @@
+%section#testimonial.section.overlay-1.testimonial.bg-image.dark-bg{style: 'background-image:url(https://techinfographics.com/wp-content/uploads/2016/06/shutterstock_229841482.jpg); background-size:cover; background-position: center bottom;'}
+  .color-overlay
+  .container
+    %header.section-heading
+      %h2 Client Testimonials
+      %span See what our customers have to say about us
+    .section-content
+      .row
+        .col-md-8.col-md-offset-2
+          .carosel-wrapper
+            .client-face-holder
+              #clientFace
+            .quote.left “
+            .quote.right ”
+            #testimonials-carousel.owl-carousel
+              .item
+                .review{ data: { client_image: image_url('guy.jpg') } }
+                  %blockquote
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                  %h4.reviewer Rasmus Snedker
+                  %p.designation CHT Biler
+              .item
+                .review{ data: { client_image: image_url('guy.jpg') } }
+                  %blockquote
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                  %h4.reviewer Dennis Stendorph
+                  %p.designation Jaguar Land Rover
+              .item
+                .review{ data: { client_image: image_url('guy.jpg') } }
+                  %blockquote
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                  %h4.reviewer Lasse Sejrup
+                  %p.designation Volkswagen
+            .owl-controls
+              %a.prev{href: "", role: "button"}
+                %i.fa.fa-angle-left
+                %span.sr-only Previous
+              %a.next{"data-slide": "next", href: "", role: "button"}
+                %i.fa.fa-angle-right
+                %span.sr-only Next

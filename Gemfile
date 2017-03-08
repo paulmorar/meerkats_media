@@ -13,6 +13,7 @@ gem 'haml-rails', '~> 0.9'
 gem 'font-awesome-sass', '~> 4.6.2'
 gem 'owlcarousel-rails', '~> 1.1', '>= 1.1.3.3'
 gem 'modernizr-rails', '~> 2.7', '>= 2.7.1'
+gem 'autoprefixer-rails'
 # gem 'therubyracer', platforms: :ruby
 
 gem 'jquery-rails'
@@ -30,6 +31,8 @@ gem 'jbuilder', '~> 2.5'
 group :development, :test do
   gem 'byebug', platform: :mri
   gem 'sqlite3'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 group :development do

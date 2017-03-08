@@ -1,0 +1,39 @@
+{
+  "cases": [
+    { "id": "1",
+      "title": "Carswip case",
+      "subtitle": "Subtitle goes here",
+      "before_image": "case1_before.jpg",
+      "after_image": "case1_after.jpg",
+      "description": "DEscription stuff"
+    },
+    { "id": "2",
+      "title": "Carswip case",
+      "subtitle": "Subtitle goes here",
+      "before_image": "case1_before.jpg",
+      "after_image": "case1_after.jpg",
+      "description": "DEscription stuff"
+    },
+    { "id": "3",
+      "title": "Carswip case",
+      "subtitle": "Subtitle goes here",
+      "before_image": "case1_before.jpg",
+      "after_image": "case1_after.jpg",
+      "description": "DEscription stuff"
+    },
+    { "id": "4",
+      "title": "Carswip case",
+      "subtitle": "Subtitle goes here",
+      "before_image": "case1_before.jpg",
+      "after_image": "case1_after.jpg",
+      "description": "DEscription stuff"
+    },
+    { "id": "5",
+      "title": "Carswip case",
+      "subtitle": "Subtitle goes here",
+      "before_image": "case1_before.jpg",
+      "after_image": "case1_after.jpg",
+      "description": "DEscription stuff"
+    }
+  ]
+}

@@ -14,9 +14,10 @@
     padding: 120px 0;
   }
     .header-wrapper-inner {
-        display: table-cell;
-        text-align: center;
-        vertical-align: middle;
+      display: table-cell;
+      text-align: center;
+      vertical-align: middle;
+      position: relative;
       &.flexslider{
         .slides{
           li{
@@ -25,49 +26,61 @@
           }
         }
       }
-        
-        .intro {
 
-            p {
-                color: rgba(255, 255, 255, 0.75);
-                letter-spacing: 4px;
-                margin-bottom: 80px;
-                text-transform: uppercase;
-
-                @media only screen and (max-width: 992px) {
-                    margin-bottom: 30px;
-                }
-            }
+      .clients {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #FFFFFF;
+        padding: 15px 0;
+        .owl-controls {
+          display: none !important;
         }
+      }
 
-        .arrow-down {
-            bottom: 10%;
-            display: block;
-            position: absolute;
-            width: 100%;
-            z-index: 3;
+      .intro {
 
-            @media only screen and (max-width: 767px) {
-              bottom: 0;
-            }
+          p {
+              color: rgba(255, 255, 255, 0.75);
+              letter-spacing: 4px;
+              margin-bottom: 20px;
+              text-transform: uppercase;
 
-            a {
-                display: inline-block;
-                padding: 20px 35px;
-
-              &:hover {
-                text-decoration: none;
+              @media only screen and (max-width: 992px) {
+                  margin-bottom: 30px;
               }
+          }
+      }
 
-                i {
-                    font-size: 2em;
-                    color: #fff;
-                    -moz-animation: bounce 2s infinite;
-                    -webkit-animation: bounce 2s infinite;
-                    animation: bounce 2s infinite;
-                }
+      .arrow-down {
+          bottom: 10%;
+          display: block;
+          position: absolute;
+          width: 100%;
+          z-index: 3;
+
+          @media only screen and (max-width: 767px) {
+            bottom: 0;
+          }
+
+          a {
+              display: inline-block;
+              padding: 20px 35px;
+
+            &:hover {
+              text-decoration: none;
             }
-        }
+
+              i {
+                  font-size: 2em;
+                  color: #fff;
+                  -moz-animation: bounce 2s infinite;
+                  -webkit-animation: bounce 2s infinite;
+                  animation: bounce 2s infinite;
+              }
+          }
+      }
     }
 }
 

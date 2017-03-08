@@ -74,41 +74,36 @@ $(document).ready(function () {
 
 (function(){
 
-    if($("#map").length == 0 || !google) return;
+   if($("#map").length == 0 || !google) return;
 
-    // When the window has finished loading create our google map below
-    google.maps.event.addDomListener(window, 'load', init);
+   // When the window has finished loading create our google map below
+   google.maps.event.addDomListener(window, 'load', init);
 
-    function init() {
-        // Basic options for a simple Google Map
-        // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
-        var mapOptions = {
-            // How zoomed in you want the map to start at (always required)
-            zoom: 11,
-            scrollwheel: false,
-            // The latitude and longitude to center the map (always required)
-            center: new google.maps.LatLng(40.6700, -73.9400), // New York
-
-            // How you would like to style the map.
-            // This is where you would paste any style found on Snazzy Maps.
-            styles: [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#e9e9e9"},{"lightness":17}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":20}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#ffffff"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":16}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":21}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#dedede"},{"lightness":21}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"lightness":16}]},{"elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#333333"},{"lightness":40}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#f2f2f2"},{"lightness":19}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#fefefe"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#fefefe"},{"lightness":17},{"weight":1.2}]}]
-        };
-
-        // Get the HTML DOM element that will contain your map
-        // We are using a div with id="map" seen below in the <body>
-        var mapElement = document.getElementById('map');
-
-        // Create the Google Map using our element and options defined above
-        var map = new google.maps.Map(mapElement, mapOptions);
-
-        // Let's also add a marker while we're at it
-        var marker = new google.maps.Marker({
-            position: new google.maps.LatLng(40.6700, -73.9400),
-            map: map,
-            title: 'Snazzy!'
-        });
-    }
-
+   function init() {
+       // Basic options for a simple Google Map
+       // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+       var mapOptions = {
+           // How zoomed in you want the map to start at (always required)
+           zoom: 14,
+           scrollwheel: false,
+           // The latitude and longitude to center the map (always required)
+           center: new google.maps.LatLng(56.1448, 10.2097), // New York
+           // How you would like to style the map.
+           // This is where you would paste any style found on Snazzy Maps.
+           styles: [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#e9e9e9"},{"lightness":17}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":20}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#ffffff"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":16}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":21}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#dedede"},{"lightness":21}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"lightness":16}]},{"elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#333333"},{"lightness":40}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#f2f2f2"},{"lightness":19}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#fefefe"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#fefefe"},{"lightness":17},{"weight":1.2}]}]
+       };
+       // Get the HTML DOM element that will contain your map
+       // We are using a div with id="map" seen below in the <body>
+       var mapElement = document.getElementById('map');
+       // Create the Google Map using our element and options defined above
+       var map = new google.maps.Map(mapElement, mapOptions);
+       // Let's also add a marker while we're at it
+       var marker = new google.maps.Marker({
+           position: new google.maps.LatLng(56.1448, 10.2097),
+           map: map,
+           title: 'Carswip HQ'
+       });
+   }
 })();
 
 /*------------------------------------------
@@ -1127,7 +1122,20 @@ var Grid = (function() {
         }
     }
 }));
+/*------------------------------------------
+ Logo Slider
+ ------------------------------------------*/
 
+$(document).ready(function () {
+    //Client Carousel
+    $("#client-carousel").owlCarousel({
+        items: 4,
+        itemsDesktopSmall: 4,
+        itemsTablet: 3,
+        itemsMobile: 2,
+        autoPlay: true
+    });
+});
 /*------------------------------------------
 	IE DETECTION
  ------------------------------------------*/
@@ -1230,15 +1238,43 @@ var Grid = (function() {
     navbarAnimation();
 
     $(window).scroll(function() {
-		    navbarAnimation();
-	  });
+		navbarAnimation();
+	});
 
 })();
 
 
 
 
+/*------------------------------------------
+	04. On-page navigation smooth scroll
+ ------------------------------------------*/
 
+$(document).ready(function(){
+
+    $('.main-navigation a[href*=#]:not([href=#]), .onPageNav').click(function() {
+
+        if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+            if (target.length) {
+				$(".navbar-collapse.collapse.in").removeClass("in");
+                $('html,body').animate({
+                    scrollTop: target.offset().top - 55
+                }, 1000, function(){
+
+                });
+                return false;
+            }
+        }
+    });
+
+    //fixed bootstrap scroll spy
+    $('#main-nav-collapse').on('activate.bs.scrollspy', function () {
+  		$(".navbar-nav > li[class='active'] > a").focus();
+	});
+
+});
 
 
 /*------------------------------------------
@@ -1493,11 +1529,9 @@ $(window).load(function() {
 
 
     //Hover Direction
-    $(function() {
-        $('#da-thumbs').find('> li').each(function () {
-            $(this).hoverdir({
-                hoverDelay : 75
-            });
+    $('#da-thumbs').find('> li').each(function () {
+        $(this).hoverdir({
+            hoverDelay : 75
         });
     });
 
@@ -1870,7 +1904,42 @@ $('#subscription-form').submit(function(e) {
 
 });
 
+/*------------------------------------------
+ Testimonial carousel
+ ------------------------------------------*/
 
+(function () {
+
+    var $testimonialCarousel = $("#testimonials-carousel"),
+        $reviews = $(".review"),
+        $clientFace = $("#clientFace");
+
+    $testimonialCarousel.owlCarousel({
+        singleItem: true,
+        autoPlay: true,
+        pagination: false,
+        autoHeight: true,
+        beforeMove: function(parm){
+            var owl = $testimonialCarousel.data('owlCarousel');
+            var image = $reviews[owl.currentItem];
+            image = $(image).data('client-image');
+            //console.log(image);
+            $clientFace.css('background-image', 'url('+image+')');
+
+        }
+
+    });
+
+    $('.carosel-wrapper .prev').click(function(e){
+        e.preventDefault();
+        $testimonialCarousel.trigger('owl.prev');
+    });
+    $('.carosel-wrapper .next').click(function(e){
+        e.preventDefault();
+        $testimonialCarousel.trigger('owl.next');
+    });
+
+})();
 /*------------------------------------------
  Video Player
  ------------------------------------------*/

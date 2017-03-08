@@ -1,0 +1,329 @@
+= render 'partials/main_header'
+= render 'partials/how_it_works'
+/ Video
+%section#video.section.video-player.dark-bg{style: 'background-image: url(http://st.motortrend.com/uploads/sites/10/2016/03/2017-Audi-A4-20T-quattro-front-view-in-motion-03.jpg); background-size: cover;'}
+  .color-overlay
+  #video-info.container
+    .row
+      .col-sm-5
+        / video-left
+        .video-left
+          Watch Our
+          %br>/
+          Video
+      / col-sm-4
+      .col-sm-2
+        / Play Button
+        %a#playVideo.btn.video-icon{:href => "#"}
+          %i.ion-ios-play-outline
+      / col-sm-4
+      .col-sm-5
+        / video-right
+        .video-right
+          ReCreate Your business
+          = succeed "ASD" do
+            %br/
+          = succeed "Watch video here" do
+            %br/
+      / col-sm-4
+    / row
+  / container
+#video-container.container
+  .row
+    .col-md-8.col-md-offset-2
+      #ytPlayer.embed-responsive.embed-responsive-16by9
+        %iframe.embed-responsive-item{:frameborder => "0", :src => "http://www.youtube.com/embed/w9j3-ghRjBs?enablejsapi=1", :title => "YouTube video player", :type => "text/html"}
+      / ytPlayer
+/ /Video
+/ Why-choose-us
+%section#why-choose-us.section.why-choose-us
+  .container
+    %header.section-heading
+      %h2 Why Choose Us
+      %span Chose us subtitle
+    .section-content
+      .row
+        .col-sm-4.why-explain-wrap
+          / why-choose-us-text
+          %h4 Creative
+          .why-explain.top.top-1
+            %p Sollicitudin velit malesuada Aliqua andit diam feugiat ex.For those who
+        / col-md-4 col-sm-6
+        .col-sm-4.why-explain-wrap
+          / why-choose-us-text
+          %h4 Professional
+          .why-explain.top.top-2
+            %p Velit sollicitudin malesuada Aliqua andit diam feugiat ex.For those who
+        / col-md-4 col-sm-6
+        .col-sm-4.why-explain-wrap
+          / why-choose-us-text
+          %h4 Experienced
+          .why-explain.top.top-3
+            %p Sollicitudin velit malesuada Aliqua andit diam feugiat ex.For those who
+        / col-md-4 col-sm-6
+      / row
+      / why-choose-us-image
+      %figure.why-us-image
+        %img.img-responsive.center-block.hidden-xs{:alt => "", :src => "https://d13yacurqjgara.cloudfront.net/users/313635/screenshots/2623290/hotel.png"}/
+      .row
+        .col-sm-4.why-explain-wrap
+          / why-choose-us-text
+          .why-explain.bottom.bottom-1
+            %h4 Dedicated
+          %p
+            Sollicitudin velit malesuada Aliqua andit diam feugiat ex.For those who
+        / col-md-4 col-sm-6
+        .col-sm-4.why-explain-wrap
+          / why-choose-us-text
+          .why-explain.bottom.bottom-2
+            %h4 24/7 Support
+          %p
+            Sollicitudin velit malesuada Aliqua andit diam feugiat ex.For those who
+        / col-md-4 col-sm-6
+        .col-sm-4.why-explain-wrap.last
+          / why-choose-us-text
+          .why-explain.bottom.bottom-3
+            %h4 Enthusiastic
+          %p.last
+            Sollicitudin velit malesuada Aliqua andit diam feugiat ex.For those who
+        / col-md-4 col-sm-6
+      / row
+    / section-content
+  / container
+/ /Why-choose-us
+/ Call To Action
+#cta-1.cta-1
+  .container
+    .call-to-action
+      .cta-text Are you excited to start your project?
+      %a.btn.btn-default-o{:href => "#"} Get Started
+  / container
+/ /Call To Action
+/ Fun Facts
+%section#funfacts.section.dark-bg.funfacts
+  .color-overlay
+  .container
+    %header.section-heading
+      %h2 Do You Know
+      %span Some cool facts about our company
+    .section-content
+      .row
+        .col-sm-4
+          .counter-box
+            .counter-icon
+              %span.ion-ios-partlysunny-outline
+            .count.number 7781914
+            .count-description Pictures edited
+        .col-sm-4
+          .counter-box
+            .counter-icon
+              %span.ion-ios-clock-outline
+            .count.number 370704
+            .count-description Cars upgraded
+        .col-sm-4
+          .counter-box.last
+            .counter-icon
+              %span.ion-ios-infinite-outline
+            .count 12 hours
+            .count-description Average delivery time
+      / row
+    / section-content
+  / container
+/ /Fun Facts
+/ Service
+-# %section#services.section.services
+-#   .container
+-#     /
+-#     %header.section-heading
+-#       %h2 Our Services
+-#       %span We plan, design, build and market high quality websites
+-#     /
+-#     .section-content
+-#       .row
+-#         .col-sm-4
+-#           / service
+-#           .service
+-#             .service-icon.text-center
+-#               %span.ion-ios-albums-outline
+-#             .about-service
+-#               %h4.text-center Responsive Design
+-#               %p.text-center Praesent dapibus eleifend aug eget sollicitudin velit malesuada Aliquam blandit diam feugiat ex eget sollicitudin eget.
+-#         / col-sm-4
+-#         .col-sm-4
+-#           / service
+-#           .service
+-#             .service-icon.text-center
+-#               %span.ion-ios-americanfootball-outline
+-#             .about-service
+-#               %h4.text-center Brand Identity
+-#               %p.text-center
+-#                 Praesent dapibus eleifend aug eget sollicitudin velit malesuada Aliquam blandit diam feugiat ex eget sollicitudin eget.
+-#         / col-sm-4
+-#         .col-sm-4
+-#           / service
+-#           .service
+-#             .service-icon.text-center
+-#               %span.ion-ios-game-controller-b-outline
+-#             .about-service
+-#               %h4.text-center Game Development
+-#               %p.text-center
+-#                 Praesent dapibus eleifend aug eget sollicitudin velit malesuada Aliquam blandit diam feugiat ex eget sollicitudin eget.
+-#         / col-sm-4
+-#       / row
+-#       .row.secondrow
+-#         .col-sm-4
+-#           / service
+-#           .service
+-#             .service-icon.text-center
+-#               %span.ion-ios-lightbulb-outline
+-#             .about-service
+-#               %h4.text-center Creative Theme
+-#               %p.text-center Praesent dapibus eleifend aug eget sollicitudin velit malesuada Aliquam blandit diam feugiat ex eget sollicitudin eget.
+-#         / col-sm-4
+-#         .col-sm-4
+-#           / service
+-#           .service
+-#             .service-icon.text-center
+-#               %span.ion-ios-pie-outline
+-#             .about-service
+-#               %h4.text-center Making Stretagy
+-#               %p.text-center
+-#                 Praesent dapibus eleifend aug eget sollicitudin velit malesuada Aliquam blandit diam feugiat ex eget sollicitudin eget.
+-#         / col-sm-4
+-#         .col-sm-4
+-#           / service
+-#           .service.last
+-#             .service-icon.text-center
+-#               %span.ion-ios-cart-outline
+-#             .about-service
+-#               %h4.text-center Business Solution
+-#               %p.text-center
+-#                 Praesent dapibus eleifend aug eget sollicitudin velit malesuada Aliquam blandit diam feugiat ex eget sollicitudin eget.
+        / col-sm-4
+      / row
+    / section-content
+  / container
+/ Service
+/ Call To Action
+#cta-2.cta-2.text-center
+  .container
+    %span.cta-text Want to see more from our works lorem ipsum dolor sit amet?
+    %a.btn.btn-default-o{:href => "portfolio__boxed__3_columns.html"} View all
+/ Call To Action
+/ Team
+%section#team.section.team
+  .container
+    %header.section-heading
+      %h2 Meet the Team
+      %span Meet the Carswip team
+    .section-content
+      .row
+        .col-sm-4.col-sm-offset-2
+          / team-member's-bio
+          .team-bio
+            %figure
+              %img.img-responsive.center-block{alt: "", src: image_path('team/kim_jeppesen.png')}/
+            .team-description
+              .member-name Kim Jeppesen
+              .designation CEO &amp; CoFounder
+            / team-member's-social
+            .team-social
+              %ul.social-block
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-facebook
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-twitter
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-linkedin
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-google-plus
+          / /team bio
+        .col-sm-4.lborder
+          / team-member's-bio
+          .team-bio
+            %figure
+              %img.img-responsive.center-block{alt: "", src: image_path('team/christian_schmidt.png')}/
+            .team-description
+              .member-name Christian Schmidt
+              .designation CPO &amp; CoFounder
+            / team-member's-social
+            .team-social
+              %ul.social-block
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-facebook
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-twitter
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-linkedin
+                %li
+                  %a{:href => "#"}
+                    %i.fa.fa-google-plus
+          / /team bio
+      / row
+    / section-content
+  / container
+/ Team
+= render 'partials/testimonials'
+/ Pricing
+%section#pricing.section.pricing
+  .container
+    /
+    %header.section-heading
+      %h2 Our Pricing
+      %span Amazing services at affordable price
+    /
+    .section-content
+      .row
+        .col-md-4
+          .price-box
+            %h3 Standard
+            .price-info
+              .price
+                %sup> kr.
+                100
+              %ul
+                %li Something
+                %li Something
+                %li Something
+                %li Something
+                %li.disabled Something
+                %li.disabled Something
+            %a.btn.btn-default{:href => "#"} Get Started
+        .col-md-4
+          .price-box.featured
+            %h3 Premium
+            .price-info
+              .price
+                %sup> kr.
+                500
+              %ul
+                %li Something
+                %li Something
+                %li Something
+                %li Something
+                %li Something
+                %li.disabled Something
+            %a.btn.btn-default{:href => "#"} Get Started
+        .col-md-4
+          .price-box.last
+            %h3 Ultimate
+            .price-info
+              .price
+                %sup> kr.
+                1000
+              %ul
+                %li Something
+                %li Something
+                %li Something
+                %li Something
+                %li Something
+                %li Something
+            %a.btn.btn-default{:href => "#"} Get Started
+/ Pricing

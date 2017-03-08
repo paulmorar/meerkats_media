@@ -75,52 +75,35 @@
         }
     }
     .navbar-nav{
-        li{
-            a{
-                color: rgba(255, 255, 255, 0.75);
-                font-size: 11px;
-                letter-spacing: 2px;
-                margin-bottom: -1px;
-                padding: 30px 20px;
-                text-transform: uppercase;
-                -moz-transition: all 0.4s ease;
-                -ms-transition: all 0.4s ease;
-                -o-transition: all 0.4s ease;
-                transition: all 0.4s ease;
-                position: relative;
-                @media only screen and (max-width: 767px) {
-                    border-bottom: 1px solid rgba(73, 71, 71, 0.15);
-                }
-
-
-                span{
-                    padding: 1px 4px;
-                    border-radius: 2px;
-                    transition: all 0.3s;
-                }
-                &:hover, &:focus{
-                    background-color: rgba(255, 255, 255, 0);
-                    span{
-                        background: white;
-                        color: black;
-
-                        @media only screen and (max-width: 767px) {
-                            background: transparent;
-                            color: white;
-                        }
-                    }
-                }
+      li{
+        a{
+          color: rgba(255, 255, 255, 0.75);
+          font-size: 14px;
+          letter-spacing: 2px;
+          margin-bottom: -1px;
+          padding: 30px 20px;
+          text-transform: uppercase;
+          -moz-transition: all 0.4s ease;
+          -ms-transition: all 0.4s ease;
+          -o-transition: all 0.4s ease;
+          transition: all 0.4s ease;
+          position: relative;
+          @media only screen and (max-width: 767px) {
+              border-bottom: 1px solid rgba(73, 71, 71, 0.15);
+          }
+          span{
+            padding: 1px 4px;
+            border-radius: 2px;
+            transition: all 0.3s;
+          }
+          &:hover, &:focus{
+            background: none;
+            span {
+              color: #ea8400;
             }
-            &.active{
-                a{
-                    background-color: rgba(255, 255, 255, 0);
-                    span{
-                        background: white;
-                        color: black;
-                    }
-                }
-            }
+          }
         }
+      }
     }
     .dropdown-toggle{
         &:after {
@@ -223,7 +206,8 @@
 
 
 .navbar-solid {
-    background-color: #000000;
+    background-color: #ffffff;
+    border-bottom: solid 1px #e4e4e4;
 
     .navbar-brand {
         padding: 10px 15px 8px;
@@ -238,6 +222,14 @@
             top: 51%;
 
         }
+    }
+
+    li {
+      a {
+        span {
+          color: #8a959e;
+        }
+      }
     }
 }
 

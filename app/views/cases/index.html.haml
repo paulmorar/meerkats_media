@@ -1,0 +1,23 @@
+%header#header.home-parallax.home-fade.dark-bg.header-inner
+  .color-overlay
+  .container
+    %h1 Cases
+    .breadcrumb
+      %a{:href => "#"} Home
+      %i.fa.fa-angle-double-right
+      %a{:href => "#"} Cases
+/ Portfolio
+%section#portfolio.section.portfolio
+  .portfolio-grid.three-col
+    %ul#da-thumbs.da-thumbs.isotope
+      - @cases.each do |c|
+        %li.design{"data-category" => "design"}
+          %a{href: case_path(c['id'])}
+            %img{src: image_path(c['after_image'])}/
+            .portfolio-detail-overlay
+              .middle-align-wrap
+                .middle-align-cell
+                  %h4= c['title']
+                  %span= c['subtitle']
+  / /portfolio-grid
+/ /Portfolio

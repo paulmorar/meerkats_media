@@ -1,8 +1,9 @@
 .header-inner {
   padding-top: 200px;
   background-color: black;
-  background-image: url(../images/backgrounds/bg-testimonial.jpg);
+  background-image: asset-url('main-bg.jpg');
   background-size: cover;
+  background-position: center;
   text-align: center;
 
   .breadcrumb {

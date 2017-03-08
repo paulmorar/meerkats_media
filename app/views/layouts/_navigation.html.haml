@@ -1,0 +1,28 @@
+%nav#fixedTopNav.navbar.navbar-fixed-top.main-navigation{itemscope: "", itemtype: "https://schema.org/SiteNavigationElement", role: "navigation"}
+  .container
+    .navbar-header
+      %button.navbar-toggle.collapsed{"data-target": "#main-nav-collapse", "data-toggle": "collapse", type: "button"}
+        %span.sr-only Toggle navigation
+        %span.fa.fa-bars
+      / Logo
+      .navbar-brand{itemscope: "", itemtype: "https://schema.org/Organization"}
+        %span.sr-only{itemprop: "name"} Carswip
+        %a{href: root_path, itemprop: "url"}
+          Carswip
+    #main-nav-collapse.collapse.navbar-collapse
+      %ul.nav.navbar-nav.navbar-right
+        %li
+          %a.page-scroll{href: root_path, itemprop: "url"}
+            %span{itemprop: "name"} Home
+        %li
+          %a.page-scroll{href: cases_path, itemprop: "url"}
+            %span{itemprop: "name"} Cases
+        %li
+          %a.page-scroll{href: price_index_path, itemprop: "url"}
+            %span{itemprop: "name"} Pricing
+        %li
+          %a.page-scroll{href: about_index_path, itemprop: "url"}
+            %span{:itemprop => "name"} About
+        %li
+          %a.page-scroll{href: contact_index_path, itemprop: "url"}
+            %span{itemprop: "name"} Contact
